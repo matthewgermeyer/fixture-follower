@@ -1,0 +1,14 @@
+{{#partial "content"}}
+    <h1> {{fixture.title}} </h1>
+    <h2>{{fixture.result}} </h2>
+    <ul>
+        {{#each fixture.event}}
+            <li> {{this}} </li>
+        {{/each}}
+    </ul>
+{{/partial}}
+{{#partial "title" }}
+Fixture - {{fixture.title}}
+{{/partial}}
+
+{{> base.hbs}}

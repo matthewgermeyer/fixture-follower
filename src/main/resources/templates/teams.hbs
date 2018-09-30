@@ -1,0 +1,31 @@
+{{#partial "title"}}Team List{{/partial}}
+
+{{#partial "content" }}
+    {{#if username}}
+        <h4>Welcome {{username}} </h4>
+    {{else}}
+        <!--Should never see this-->
+        <h1>Not Signed in?!</h1>
+    {{/if}}
+
+
+    <ul>
+        {{#each teams}}
+            <li>
+                    <a href="/teams/{{slug}}/">
+                        {{name}}
+                    </a>
+                <a href="/spurs" methods="get">
+                    <button>Details</button>
+                </a>
+
+                <!--<form action="/" method="get">-->
+                <!--</form>-->
+            </li>
+        {{/each}}
+
+    </ul>
+
+{{/partial}}
+
+{{> base.hbs}}

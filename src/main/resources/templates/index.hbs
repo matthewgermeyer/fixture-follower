@@ -1,0 +1,14 @@
+{{#partial "content"}}
+    {{#if username}}
+        <h1>Welcome {{username}} </h1>
+    {{else}}
+        <h1>Welcome to Fixture Follower!</h1>
+        <form action="/teams" method="get">
+            <input type="text" placeholder="Give me a username!"    name="username">
+            <button>Sign in</button>
+        </form>
+    {{/if}}
+{{/partial}}
+
+{{> base.hbs}}
+

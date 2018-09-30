@@ -1,0 +1,23 @@
+{{#partial "title"}}Spurs Roster{{/partial}}
+
+{{#partial "content" }}
+    {{#if username}}
+        <h4>Welcome {{username}} </h4>
+    {{else}}
+        <!--Should never see this-->
+        <h1>Not Signed in?!</h1>
+    {{/if}}
+    <h2>Team name: {{teamName}}  </h2>
+    <p>Manager : {{manager}} </p>
+    <h4>Roster : {{rosterList}} </h4>
+
+    <ul>
+        {{#each names}}
+            <li> {{name}} </li>
+        {{/each}}
+
+    </ul>
+
+{{/partial}}
+
+{{> base.hbs}}
